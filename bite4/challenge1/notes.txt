@@ -1,0 +1,6 @@
+And then in terminal:
+
+`node`
+`const add = require('./add');`
+`const multiply = require('./multiply');`
+`multiply(2, add(4,4));` => 16
