@@ -16,7 +16,6 @@ class Thermostat {
     }
   }
 
-  // implement minimum temp of 10
   down() {
     if (this.temperature > 10) {
       this.temperature -= 1;      
