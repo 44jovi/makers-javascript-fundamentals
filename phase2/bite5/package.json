@@ -1,5 +1,5 @@
 {
-  "name": "exercise1",
+  "name": "bite5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^29.0.3"
+    "got": "^11.8.5",
+    "jest": "^29.1.1"
   }
 }
