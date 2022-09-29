@@ -1,21 +1,21 @@
 const got = require('got');
 
-const fetchRepositoryInfo = (urlSuffix, callback) => {
+const fetchRepositoryInfo = (repoName, cb) => {
   
-  const url = 'https://api.github.com/repos/' + urlSuffix;
+  const url = 'https://api.github.com/repos/' + repoName;
 
   got(url)
     .then((response) => {
-      callback(JSON.parse(response.body));
+      cb(JSON.parse(response.body));
     });
 };
 
-fetchRepositoryInfo('sinatra/sinatra', (response) => {
-  console.log(response);
-});
+fetchRepositoryInfo('sinatra/sinatra', console.log);
+fetchRepositoryInfo('makersacademy/bowling-challenge', console.log);
 
-fetchRepositoryInfo('makersacademy/bowling-challenge', (response) => {
-  console.log(response);
-});
+// this also works:
+// fetchRepositoryInfo('sinatra/sinatra', (response) => {
+//   console.log(response);
+// });
 
 module.exports = fetchRepositoryInfo;
